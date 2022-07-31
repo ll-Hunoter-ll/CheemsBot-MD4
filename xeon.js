@@ -77,7 +77,7 @@ async function startXeonBotInc() {
     const XeonBotInc = XeonBotIncConnect({
         logger: pino({ level: 'silent' }),
         printQRInTerminal: true,
-        browser: ['Subscribe Xeon','Safari','1.0.0'],
+        browser: ['Folg mheg','Safari','1.0.0'],
         auth: state
     })
 
@@ -88,7 +88,7 @@ async function startXeonBotInc() {
     const callerId = json.content[0].attrs['call-creator']
     if (json.content[0].tag == 'offer') {
     let xeonfek = await XeonBotInc.sendContact(callerId, global.owner)
-    XeonBotInc.sendMessage(callerId, { text: `Automatic Block System!\nDon't Call Bot!\nPlease Ask Or Contact The Owner To Unblock You!`}, { quoted : xeonfek })
+    XeonBotInc.sendMessage(callerId, { text: `Automatisches Sperrsystem!\nRufen Sie den Bot nicht an!\nBitte fragen oder kontaktieren Sie den Eigentümer, um Sie zu entsperren!`}, { quoted : xeonfek })
     await sleep(8000)
     await XeonBotInc.updateBlockStatus(callerId, "block")
     }
@@ -121,15 +121,15 @@ async function startXeonBotInc() {
        }
        let lolXeon = { url : ppgc }
        if (pea[0].announce == true) {
-       XeonBotInc.send5ButImg(pea[0].id, `「 Group Settings Changed 」\n\nThe Group Has Been Closed By Admin, Now Only Admin Can Send Messages !`, `${botname}`, lolXeon, [])
+       XeonBotInc.send5ButImg(pea[0].id, `「 Gruppeneinstellungen geändert 」\n\nDie Gruppe wurde vom Administrator geschlossen, jetzt kann nur der Administrator Nachrichten senden !`, `${botname}`, lolXeon, [])
        } else if(pea[0].announce == false) {
-       XeonBotInc.send5ButImg(pea[0].id, `「 Group Settings Changed 」\n\nThe Group Has Been Opened By Admin, Now Participants Can Send Messages !`, `${botname}`, lolXeon, [])
+       XeonBotInc.send5ButImg(pea[0].id, `「 Gruppeneinstellungen geändert 」\n\nDie Gruppe wurde vom Administrator geöffnet, jetzt können die Teilnehmer Nachrichten senden!`, `${botname}`, lolXeon, [])
        } else if (pea[0].restrict == true) {
-       XeonBotInc.send5ButImg(pea[0].id, `「 Group Settings Changed 」\n\nGroup Info Has Been Restricted, Now Only Admin Can Edit Group Info !`, `${botname}`, lolXeon, [])
+       XeonBotInc.send5ButImg(pea[0].id, `「 Gruppeneinstellungen geändert 」\n\nGruppeninformationen wurden eingeschränkt, jetzt kann nur der Administrator Gruppeninformationen bearbeiten !`, `${botname}`, lolXeon, [])
        } else if (pea[0].restrict == false) {
-       XeonBotInc.send5ButImg(pea[0].id, `「 Group Settings Changed 」\n\nGroup Info Has Been Opened, Now Participants Can Edit Group Info !`, `${botname}`, lolXeon, [])
+       XeonBotInc.send5ButImg(pea[0].id, `「 Gruppeneinstellungen geändert 」\n\nGruppeninformationen wurden geöffnet, jetzt können die Teilnehmer Gruppeninformationen bearbeiten !`, `${botname}`, lolXeon, [])
        } else {
-       XeonBotInc.send5ButImg(pea[0].id, `「 Group Settings Changed 」\n\nGroup Subject Has Been Changed To *${pea[0].subject}*`, `${botname}`, lolXeon, [])
+       XeonBotInc.send5ButImg(pea[0].id, `「 Gruppeneinstellungen geändert 」\n\nGruppenbetreff wurde geändert in *${pea[0].subject}*`, `${botname}`, lolXeon, [])
      }
     })
     
@@ -174,7 +174,7 @@ XeonLft = await getBuffer(`https://hardianto.xyz/api/goodbye3?profile=${encodeUR
 	            const xmembers = metadata.participants.length
                 let unicorndoc = {key: {fromMe: false,"participant":"0@s.whatsapp.net", "remoteJid": "916909137213-1604595598@g.us"}, "message": {orderMessage: {itemCount: 9999999,status: 200, thumbnail: XeonWlcm, surface: 200, message: `${metadata.subject}`, orderTitle: 'xeon', sellerJid: '0@s.whatsapp.net'}}, contextInfo: {"forwardingScore":999,"isForwarded":true},sendEphemeral: true}
                 xeonbody = `┌─❖
-│「 𝗛𝗶 👋 」
+│「 𝗛𝗶  」
 └┬❖ 「 @${xeonName.split("@")[0]}  」
    │✑  𝗪𝗲𝗹𝗰𝗼𝗺𝗲 𝘁𝗼 
    │✑  ${metadata.subject}
@@ -187,7 +187,7 @@ XeonLft = await getBuffer(`https://hardianto.xyz/api/goodbye3?profile=${encodeUR
    //dont forget to put my name(Xeon) as credit
    //you fail to put, i sue you for sure!
 let buttons = [
-{buttonId: `wkwwk`, buttonText: {displayText: 'Welcome 💐'}, type: 1}
+{buttonId: `wkwwk`, buttonText: {displayText: 'Welcome'}, type: 1}
 ]
 let buttonMessage = {
 document: fs.readFileSync('./XeonMedia/theme/cheems.xlsx'),
@@ -202,7 +202,7 @@ buttons: buttons,
 headerType: 4,
 contextInfo:{externalAdReply:{
 title: `${ownername}`,
-body: `Don't forget to read group description`,
+body: `Vergessen Sie nicht, die Gruppenbeschreibung zu lesen`,
 mediaType:2,
 thumbnail: XeonWlcm,
 sourceUrl: `${websitex}`,
@@ -218,7 +218,7 @@ XeonBotInc.sendMessage(anu.id, buttonMessage, {quoted:unicorndoc})
                     const xeonmembers = metadata.participants.length
                     let unicorndoc = {key: {fromMe: false,"participant":"0@s.whatsapp.net", "remoteJid": "916909137213-1604595598@g.us"}, "message": {orderMessage: {itemCount: 9999999,status: 200, thumbnail: xeonbuffer, surface: 200, message: `${metadata.subject}`, orderTitle: 'xeon', sellerJid: '0@s.whatsapp.net'}}, contextInfo: {"forwardingScore":999,"isForwarded":true},sendEphemeral: true}
                     xeonbody = `┌─❖
-│「 𝗚𝗼𝗼𝗱𝗯𝘆𝗲 👋 」
+│「 𝗚𝗼𝗼𝗱𝗯𝘆𝗲  」
 └┬❖ 「 @${xeonName.split("@")[0]}  」
    │✑  𝗟𝗲𝗳𝘁 
    │✑ ${metadata.subject}
@@ -231,7 +231,7 @@ XeonBotInc.sendMessage(anu.id, buttonMessage, {quoted:unicorndoc})
    //dont forget to put my name(Xeon) as credit
    //you fail to put, i sue you for sure!
 let buttons = [
-{buttonId: `wkwkwk`, buttonText: {displayText: 'Sayonara 🥀'}, type: 1}
+{buttonId: `wkwkwk`, buttonText: {displayText: 'Tschüss'}, type: 1}
 ]
 let buttonMessage = {
 document: fs.readFileSync('./XeonMedia/theme/cheems.xlsx'),
@@ -246,7 +246,7 @@ buttons: buttons,
 headerType: 4,
 contextInfo:{externalAdReply:{
 title: `${ownername}`,
-body: `Bye! my friend, take care.`,
+body: `Wiedersehen! mein Freund, pass auf dich auf.`,
 mediaType:2,
 thumbnail: XeonLft,
 sourceUrl: `${websitex}`,
@@ -332,16 +332,16 @@ XeonBotInc.sendMessage(anu.id, buttonMessage, {quoted:unicorndoc})
         const { connection, lastDisconnect } = update	    
         if (connection === 'close') {
         let reason = new Boom(lastDisconnect?.error)?.output.statusCode
-            if (reason === DisconnectReason.badSession) { console.log(`Bad Session File, Please Delete Session and Scan Again`); XeonBotInc.logout(); }
-            else if (reason === DisconnectReason.connectionClosed) { console.log("🦄Connection closed, reconnecting...."); startXeonBotInc(); }
-            else if (reason === DisconnectReason.connectionLost) { console.log("🦄Connection Lost from Server, reconnecting..."); startXeonBotInc(); }
-            else if (reason === DisconnectReason.connectionReplaced) { console.log("🦄Connection Replaced, Another New Session Opened, Please Close Current Session First"); XeonBotInc.logout(); }
-            else if (reason === DisconnectReason.loggedOut) { console.log(`🦄Device Logged Out, Please Scan Again And Run.`); XeonBotInc.logout(); }
-            else if (reason === DisconnectReason.restartRequired) { console.log("🦄Restart Required, Restarting..."); startXeonBotInc(); }
-            else if (reason === DisconnectReason.timedOut) { console.log("🦄Connection TimedOut, Reconnecting..."); startXeonBotInc(); }
-            else XeonBotInc.end(`🦄Unknown DisconnectReason: ${reason}|${connection}`)
+            if (reason === DisconnectReason.badSession) { console.log(`Fehlerhafte Sitzungsdatei, bitte Sitzung löschen und erneut scannen`); XeonBotInc.logout(); }
+            else if (reason === DisconnectReason.connectionClosed) { console.log("Verbindung geschlossen, Verbindung neu...."); startXeonBotInc(); }
+            else if (reason === DisconnectReason.connectionLost) { console.log("Verbindung zum Server unterbrochen, Verbindung neu..."); startXeonBotInc(); }
+            else if (reason === DisconnectReason.connectionReplaced) { console.log("Verbindung ersetzt, weitere neue Sitzung geöffnet, bitte zuerst aktuelle Sitzung schließen"); XeonBotInc.logout(); }
+            else if (reason === DisconnectReason.loggedOut) { console.log(`Gerät abgemeldet, bitte erneut scannen und ausführen.`); XeonBotInc.logout(); }
+            else if (reason === DisconnectReason.restartRequired) { console.log("Neustart erforderlich, Neustart..."); startXeonBotInc(); }
+            else if (reason === DisconnectReason.timedOut) { console.log("Zeitüberschreitung bei Verbindung, Verbindung neu..."); startXeonBotInc(); }
+            else XeonBotInc.end(`Unbekannter Trennungsgrund: ${reason}|${connection}`)
         }
-        console.log('Connected...', update)
+        console.log('In Verbindung gebracht...', update)
     })
 
     XeonBotInc.ev.on('creds.update', saveState)

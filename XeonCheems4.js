@@ -8750,7 +8750,7 @@ reply(`Successfully Reported To The Owner\n\nPlease Make Sure The Bug Is Valid, 
 case 'sc': case 'script': case 'donate': case 'donate': case 'cekupdate': case 'updatebot': case 'cekbot': case 'sourcecode': {
 	if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
-teks = `*「 ${global.botname} Script 」*\n\nYouTube: ${global.websitex}\nGitHub: ${global.botscript}\n\nDont forget to donate 🍜`
+teks = `*「 ${global.botname} Script 」*\n\nInstagram: ${global.websitex}\ninstagram: ${global.botscript}\n\nDont forget to follow`
 let buttons = [
 {buttonId: `menu`, buttonText: {displayText: 'Menu 🌺'}, type: 1}
 ]
@@ -8790,7 +8790,7 @@ XeonBotInc.sendMessage(from, { react: { text: `${global.reactmoji}`, key: m.key 
                             }, {
                                 quickReplyButton: {
                                     displayText: 'All Menu 🍱',
-                                    id: 'allmenu'
+                                    id: 'menu'
                                 }
                             }, {
                                 quickReplyButton: {
@@ -8817,10 +8817,10 @@ XeonBotInc.sendMessage(from, { react: { text: `${global.reactmoji}`, key: m.key 
                         } else if (setbot.templateDocument) {
                         let buttonmenu = [
         	{ urlButton: { displayText: `YouTube 🍒`, url : `${websitex}` } },
-            { urlButton: { displayText: `Script 🍜`, url: `${botscript}` } },
-            { quickReplyButton: { displayText: `All Menu 🍱`, id: 'allmenu'} },
+            { urlButton: { displayText: `Script `, url: `${botscript}` } },
+            { quickReplyButton: { displayText: `Menu 🍱`, id: 'menu'} },
             { quickReplyButton: { displayText: `List Menu 🍢`, id: 'command'} },
-            { quickReplyButton: { displayText: `Owner 🤣`, id: 'owner'} }
+            { quickReplyButton: { displayText: `Owner `, id: 'owner'} }
         	]
         	XeonBotInc.sendMessage(m.chat, { caption: menulist, document: fs.readFileSync('./XeonMedia/theme/cheems.xlsx'), mimetype: `${docs}`, fileName: `${ownername}`, templateButtons: buttonmenu, footer: `${botname}`, mentionedJid: [m.sender] })
                         }
@@ -8983,10 +8983,10 @@ let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObje
             XeonBotInc.relayMessage(m.chat, template.message, { messageId: template.key.id })
             }
             break
-case 'allmenu':
+case 'menu':
 	   if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
-var unicorn = await getBuffer(picak+'All Menu')
+var unicorn = await getBuffer(picak+'Menu')
 await XeonBotInc.send5ButImg(from, `╔═══════✪「 OWNER 」	
 ╠ ${prefix}self
 ╠ ${prefix}public
@@ -10586,10 +10586,7 @@ break
 case 'tqtt': 
 	   if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
-reply(`Thanks to
-LORD BUDDHA
-Xeon (Me)
-My family
+reply(`
 And all friends who helped assemble this sexy script !!!`)
 break
             default:
