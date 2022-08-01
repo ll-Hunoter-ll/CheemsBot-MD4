@@ -2258,7 +2258,7 @@ if (isBanChat) return reply(mess.banChat)
 if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
 	reply(mess.wait)
-                if (!isCreator) return replay(`${mess.owner}`)
+                if (!isCreator && !isPremium) return replay(`${mess.owner}`)
                 await XeonBotInc.groupLeave(m.chat).then((res) => reply(jsonformat(res))).catch((err) => reply(jsonformat(err)))
             }
             break
