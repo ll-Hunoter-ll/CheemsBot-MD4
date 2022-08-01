@@ -748,21 +748,6 @@ XeonBotInc.sendMessage(from, {text:`\`\`\`「 Link Detected 」\`\`\`\n\n@${kice
 } else {
 }
 
-                //auto reply by xeon
-  //if (Autoreply) //remove forwad slashes to make it autoreply on off
-        for (let anji of xeonysticker){
-				if (budy === anji){
-					result = fs.readFileSync(`./XeonMedia/sticker/${anji}.webp`)
-					XeonBotInc.sendMessage(m.chat, { sticker: result }, { quoted: m })
-					}
-			}
-			  //if (Autoreply) //remove forwad slashes to make it autoreply on off
-			for (let anju of xeonyaudio){
-				if (budy === anju){
-					result = fs.readFileSync(`./XeonMedia/audio/${anju}.mp3`)
-					XeonBotInc.sendMessage(m.chat, { audio: result, mimetype: 'audio/mp4', ptt: true }, { quoted: m })     
-					}
-			}
 			  //if (Autoreply) //remove forwad slashes to make it autoreply on off
 			for (let anjh of xeonyimage){
 				if (budy === anjh){
